@@ -53,14 +53,21 @@ const displayData = (posts) => {
     // for(const post of posts){
     //     console.log(post);
     // }
-    const container = document.getElementById("container")
-    container.innerHTML = ""
+    const containerPost = document.getElementById("containerPost")
+    containerPost.innerHTML = ""
 
     posts.forEach(post => {
         console.log(post);
-        const li = document.createElement("li")
-        li.innerText = post.title
-        container.appendChild(li)
+        const postCard = document.createElement("div")
+        postCard.innerHTML = `
+        <div class="post-card">
+        <h2>${post.title}</h2>
+        <p>
+    ${post.body}
+        </p>
+      </div>
+        `
+        containerPost.appendChild(postCard)
     })
 
 }

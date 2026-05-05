@@ -1,16 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-     <button onclick="loadData()">Load Data</button>
-     <button onclick="loadPost()">Load Post</button>
+    <style>
+      /* ===== Container Grid ===== */
+      #containerPost {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 16px;
+      }
 
-     <ol id="container"></ol>
+      /* ===== Card Design ===== */
+      .post-card {
+        background: #ffffff;
+        border-radius: 14px;
+        padding: 18px;
+        border: 1px solid rgba(128, 128, 128, 0.25);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Hover effect (gold border + glow) */
+      .post-card:hover {
+        border: 1px solid gold;
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.35);
+        transform: translateY(-4px);
+      }
+
+      /* ===== Text styling ===== */
+      .post-card h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        color: #222;
+      }
+
+      .post-card p {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      /* ===== Responsive Breakpoints ===== */
+
+      /* Small devices (mobile) */
+      @media (max-width: 480px) {
+        #containerPost {
+          grid-template-columns: 1fr;
+          gap: 16px;
+          padding: 12px;
+        }
+
+        .post-card {
+          padding: 14px;
+        }
+      }
+
+      /* Medium devices (tablet) */
+      @media (min-width: 481px) and (max-width: 768px) {
+        #containerPost {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Large devices (laptop) */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        #containerPost {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      /* Extra large (desktop বড় screen) */
+      @media (min-width: 1025px) {
+        #containerPost {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="loadData()">Load Data</button>
+    <button onclick="loadPost()">Load Post</button>
+
+    <div id="containerPost">
+      <div class="post-card">
+        <h2>Title</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          reiciendis voluptas minus et quia autem, labore totam voluptatibus eos
+          tempore!
+        </p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
