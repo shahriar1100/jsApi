@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>todo</title>
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- font awesome -->
+    <style>
+        /* container */
+#todoContainer {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+}
+
+/* card */
+.todo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  transition: 0.3s ease;
+}
+
+/* hover */
+.todo-card:hover {
+  border: 1px solid gold;
+  box-shadow: 0 4px 14px rgba(255, 215, 0, 0.3);
+}
+
+/* left side */
+.todo-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.todo-left h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.todo-left p {
+  font-size: 13px;
+  color: #555;
+  margin: 2px 0 0;
+}
+.todo-check:disabled:checked {
+  accent-color: red;
+}
+
+/* checkbox */
+/* .todo-check {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+} */
+
+/* completed state */
+/* .todo-check:checked + div h3 {
+  text-decoration: line-through;
+  color: gray;
+} */
+
+
+    </style>
+  </head>
+  <input checked disabled type="checkbox" class="todo-check" />
+  <body>
+    <div id="todoContainer">
+      
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
