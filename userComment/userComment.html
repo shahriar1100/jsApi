@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Comment</title>
+</head>
+<style>
+    body {
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+#userComment {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 16px;
+      }
+
+/* card */
+.comment-card {
+  max-width: 400px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  margin: 40px auto;
+  transition: 0.3s ease;
+}
+
+/* hover effect */
+.comment-card:hover {
+  border: 1px solid gold;
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+/* title */
+.comment-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+/* email */
+.comment-email {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+/* body */
+.comment-body {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  white-space: pre-line; /* line break maintain করবে */
+}
+</style>
+<body>
+    <div id="userComment">
+        <div class="comment-card">
+  <h3 class="comment-title">
+    quo vero reiciendis velit similique earum
+  </h3>
+
+  <p class="comment-email">
+    Jayne_Kuhic@sydney.com
+  </p>
+
+  <p class="comment-body">
+    est natus enim nihil est dolore omnis voluptatem numquam
+    et omnis occaecati quod ullam at
+    voluptatem error expedita pariatur
+    nihil sint nostrum voluptatem reiciendis et
+  </p>
+</div>
+    </div>
+
+    <script src="userComment.js"></script>
+</body>
+</html>
